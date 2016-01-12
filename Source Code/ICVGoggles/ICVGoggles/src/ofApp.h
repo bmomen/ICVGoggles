@@ -22,4 +22,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
+		ofxOculusDK2		oculusRift;
+
+		ofEasyCam			cam;
 };

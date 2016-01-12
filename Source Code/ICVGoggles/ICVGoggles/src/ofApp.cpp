@@ -9,7 +9,7 @@ void ofApp::setup(){
 	oculusRift.setup();
 
 	//must run in full screen mode
-	ofToggleFullScreen();
+	//ofToggleFullScreen();
 }
 
 //--------------------------------------------------------------

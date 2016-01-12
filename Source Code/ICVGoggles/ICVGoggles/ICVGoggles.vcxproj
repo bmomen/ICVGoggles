@@ -95,15 +95,41 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>
-C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\src;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\src;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\3rdParty;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\3rdParty\TinyXml;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Include;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Debug;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Debug32;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Release;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Release32;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64\VS2010;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64\VS2012;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64\VS2013;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\GL;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Textures;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Sensors;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Service;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Tracking;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Util;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -116,8 +142,35 @@ C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\s
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>
-C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\src;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\src;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\3rdParty;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\3rdParty\TinyXml;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Include;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Debug;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Debug32;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Release;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Release32;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64\VS2010;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64\VS2012;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64\VS2013;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\GL;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Textures;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Sensors;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Service;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Tracking;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Util;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -125,7 +178,6 @@ C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\s
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -137,8 +189,35 @@ C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\s
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>
-C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\src;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\src;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\3rdParty;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\3rdParty\TinyXml;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Include;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Debug;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Debug32;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Release;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Release32;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64\VS2010;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64\VS2012;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64\VS2013;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\GL;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Textures;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Sensors;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Service;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Tracking;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Util;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -149,7 +228,6 @@ C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\s
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -161,8 +239,35 @@ C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\s
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>
-C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\src;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\src;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\3rdParty;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\3rdParty\TinyXml;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Include;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Debug;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Debug32;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Release;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\MacOS\Release32;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64\VS2010;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64\VS2012;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Lib\x64\VS2013;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\GL;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Textures;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Sensors;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Service;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Tracking;
+C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Util;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -172,7 +277,6 @@ C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\s
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -187,6 +291,74 @@ C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\s
     <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\src\ofxSlider.cpp" />
     <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\src\ofxSliderGroup.cpp" />
     <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\src\ofxToggle.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\3rdParty\TinyXml\tinyxml2.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\CAPI_DistortionRenderer.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\CAPI_FrameTimeManager.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\CAPI_HMDRenderState.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\CAPI_HMDState.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\CAPI_HSWDisplay.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D10_DistortionRenderer.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D10_HSWDisplay.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D11_DistortionRenderer.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D11_HSWDisplay.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D1X_DistortionRenderer.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D1X_HSWDisplay.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D1X_Util.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D9_DistortionRenderer.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D9_HSWDisplay.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D9_Util.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\GL\CAPI_GL_DistortionRenderer.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\GL\CAPI_GL_HSWDisplay.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\GL\CAPI_GL_Util.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays\OVR_Display.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays\OVR_OSX_Display.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays\OVR_Win32_Display.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays\OVR_Win32_FocusReader.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays\OVR_Win32_RenderShim.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays\OVR_Win32_ShimFunctions.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Alg.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Allocator.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Atomic.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_CRC32.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_File.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_FileFILE.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Lockless.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Log.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Math.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_RefCount.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_SharedMemory.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Std.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_String.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_String_FormatUtil.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_String_PathUtil.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_SysFile.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_System.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_ThreadCommandQueue.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_ThreadsPthread.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_ThreadsWinAPI.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Timer.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_UTF8Util.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_BitStream.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_NetworkPlugin.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_PacketizedTCPSocket.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_RPC1.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_Session.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_Socket.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_Unix_Socket.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_Win32_Socket.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\OVR_CAPI.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\OVR_JSON.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\OVR_Profile.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\OVR_SerialFormat.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\OVR_Stereo.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Service\Service_NetClient.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Service\Service_NetSessionCommon.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Tracking\Tracking_SensorStateReader.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Util\Util_ImageWindow.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Util\Util_Interface.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Util\Util_LatencyTest2Reader.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Util\Util_Render_Stereo.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\src\ofxOculusDK2.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
   </ItemGroup>
@@ -200,6 +372,115 @@ C:\Users\Babak - Pc\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\s
     <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\src\ofxSlider.h" />
     <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\src\ofxSliderGroup.h" />
     <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxGui\src\ofxToggle.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\3rdParty\TinyXml\tinyxml2.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Include\OVR.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Include\OVR_Kernel.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Include\OVR_Version.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\CAPI_DistortionRenderer.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\CAPI_FrameTimeManager.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\CAPI_HMDRenderState.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\CAPI_HMDState.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\CAPI_HSWDisplay.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D10_DistortionRenderer.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D10_HSWDisplay.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D11_DistortionRenderer.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D11_HSWDisplay.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D1X_DistortionRenderer.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D1X_HSWDisplay.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D1X_Util.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D9_DistortionRenderer.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\D3D1X\CAPI_D3D9_HSWDisplay.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\GL\CAPI_GL_DistortionRenderer.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\GL\CAPI_GL_DistortionShaders.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\GL\CAPI_GL_HSWDisplay.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\GL\CAPI_GL_Util.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\DistortionChroma_ps.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\DistortionChroma_ps_refl.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\DistortionChroma_vs.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\DistortionChroma_vs_refl.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\DistortionTimewarpChroma_vs.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\DistortionTimewarpChroma_vs_refl.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\DistortionTimewarp_vs.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\DistortionTimewarp_vs_refl.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\Distortion_ps.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\Distortion_ps_refl.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\Distortion_vs.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\Distortion_vs_refl.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\SimpleQuad_ps.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\SimpleQuad_ps_refl.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\SimpleQuad_vs.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\SimpleQuad_vs_refl.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\SimpleTexturedQuad_ps.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\SimpleTexturedQuad_ps_refl.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\SimpleTexturedQuad_vs.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Shaders\SimpleTexturedQuad_vs_refl.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\Textures\healthAndSafety.tga.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays\OVR_Display.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays\OVR_OSX_Display.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays\OVR_Win32_Display.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays\OVR_Win32_Dxgi_Display.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays\OVR_Win32_FocusReader.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Displays\OVR_Win32_ShimFunctions.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Alg.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Allocator.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Array.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Atomic.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Color.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Compiler.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_ContainerAllocator.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_CRC32.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Delegates.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Deque.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_File.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Hash.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_KeyCodes.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_List.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Lockless.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Log.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Math.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Nullptr.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Observer.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_RefCount.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_SharedMemory.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Std.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_String.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_StringHash.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_SysFile.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_System.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_ThreadCommandQueue.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Threads.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Timer.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_Types.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Kernel\OVR_UTF8Util.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_BitStream.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_MessageIDTypes.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_NetworkPlugin.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_NetworkTypes.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_PacketizedTCPSocket.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_RPC1.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_Session.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_Socket.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_Unix_Socket.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Net\OVR_Win32_Socket.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\OVR_CAPI.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\OVR_CAPI_D3D.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\OVR_CAPI_GL.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\OVR_JSON.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\OVR_Profile.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\OVR_SerialFormat.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\OVR_Stereo.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Sensors\OVR_DeviceConstants.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Service\Service_NetClient.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Service\Service_NetSessionCommon.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Tracking\Tracking_PoseState.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Tracking\Tracking_SensorState.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Tracking\Tracking_SensorStateReader.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Util\Util_ImageWindow.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Util\Util_Interface.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Util\Util_LatencyTest2Reader.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Util\Util_LatencyTest2State.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Util\Util_Render_Stereo.h" />
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\src\ofxOculusDK2.h" />
     <ClInclude Include="src\ofApp.h" />
   </ItemGroup>
   <ItemGroup>

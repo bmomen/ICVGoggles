@@ -1,2 +1,3 @@
 ofxGui
 ofxOculusDK2-master
+ofxOculusDK2Lib

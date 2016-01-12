@@ -309,6 +309,9 @@
     <Filter Include="addons\ofxOculusDK2-master\libs\LibOVR\Src\Util">
       <UniqueIdentifier>{201c3834-5487-4a66-8373-3fccc6a15298}</UniqueIdentifier>
     </Filter>
+    <Filter Include="addons\ofxOculusDK2Lib">
+      <UniqueIdentifier>{ef3b50d9-c2e2-4ef1-84b6-626a46def391}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h">
@@ -667,6 +670,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\Util\Util_Render_Stereo.h">
       <Filter>addons\ofxOculusDK2-master\libs\LibOVR\Src\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\GL\glext.h">
+      <Filter>addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Desktop\ICVGoggles\ICVGoggles\OpenFrameworks\addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\GL\wglext.h">
+      <Filter>addons\ofxOculusDK2-master\libs\LibOVR\Src\CAPI\GL</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

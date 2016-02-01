@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{0cf0aedc-d737-4c53-bda0-42c44f1bed3e}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\OculusVR">
+      <UniqueIdentifier>{a58b1cc7-778e-4311-ba63-0aceb386f546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{e32abae1-4173-45cf-a012-8f6dff2fc748}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\C3DCubeModel">
+      <UniqueIdentifier>{d23c658d-4d1d-45ad-acde-a93b1c2d42e7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="COculusVR.cpp">
+      <Filter>ソース ファイル\OculusVR</Filter>
+    </ClCompile>
+    <ClCompile Include="C3DCubeModel.cpp">
+      <Filter>ソース ファイル\C3DCubeModel</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="COculusVR.h">
+      <Filter>ソース ファイル\OculusVR</Filter>
+    </ClInclude>
+    <ClInclude Include="OculusLensShader.h">
+      <Filter>ソース ファイル\OculusVR</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>リソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="C3DCubeModel.h">
+      <Filter>ソース ファイル\C3DCubeModel</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc">
+      <Filter>リソース ファイル</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OpenAL32.dll">
+      <Filter>ソース ファイル\OculusVR</Filter>
+    </None>
+    <None Include="ovrvision_64.dll">
+      <Filter>ソース ファイル\OculusVR</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="ovrvision_64.lib">
+      <Filter>ソース ファイル\OculusVR</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

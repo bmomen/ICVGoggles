@@ -1,14 +1,8 @@
-Ovrvision SDK Version 2.16
+Ovrvision SDK Version 2.15
 Copyright(C) 2013-2015 wizapply.com
 
-<<Version 2.16 - 24/Mar/2015>>
-* Add support example for VisualStudio 2012.
-* Add support Unity5(unitypackage file).
-* Fixed a bug in the OvrvisionSDK for Mac OSX.
-* Add the function to move a OVRCameraRig from AR marker. 
-
 <<Version 2.15 - 24/Feb/2015>>
-* Add support example for VisualStudio 2010 or later.
+* Support example, VisualStudio 2010 or later.
 * Support Oculus Rift DK1 for the Calibration tool.
 * Added AR drawing in the example.
 

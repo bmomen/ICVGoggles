@@ -22,5 +22,6 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		//
 		ofVideoGrabber cam;
+		ofVideoGrabber cam1;
 		float centerX, centerY, centerZ;
 };

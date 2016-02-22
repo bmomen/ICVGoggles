@@ -7,17 +7,25 @@ void ofApp::setup(){
 	centerX = ofGetWidth() / 2;
 	centerY = ofGetHeight() / 2;
 	centerZ = 0;
+	cam.setDeviceID(0);
+	
+	cam1.setDeviceID(1);
 	cam.setup(320, 240);
+	cam1.setup(320, 240);
+	cam.listDevices();
+	
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 	cam.update();
+	cam1.update();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
 	cam.draw(0, 0);
+	cam1.draw(320, 0);
 }
 
 //--------------------------------------------------------------

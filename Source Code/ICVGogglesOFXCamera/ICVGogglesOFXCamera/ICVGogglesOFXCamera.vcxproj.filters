@@ -15,9 +15,6 @@
     <Filter Include="addons">
       <UniqueIdentifier>{5f58fcc3-6376-408d-a2ba-70c0f967f97b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="addons\ofxOculusDK2Lib">
-      <UniqueIdentifier>{6b344ad9-1e83-4982-b8e6-4bd0b43a6271}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h">

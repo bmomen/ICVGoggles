@@ -2,6 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+	ofToggleFullscreen();
 	ofBackground(250, 250, 250);
 	ofSetVerticalSync(true);
 	centerX = ofGetWidth() / 2;
@@ -24,8 +25,8 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	cam.draw(0, 500,640,-480);
-	cam1.draw(640,500,640,-480);
+	cam.draw(0, ofGetHeight(),ofGetWidth()/2,-ofGetHeight());
+	cam1.draw(ofGetWidth()/2,ofGetHeight(),ofGetWidth()/2,-ofGetHeight());
 }
 
 //--------------------------------------------------------------

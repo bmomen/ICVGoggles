@@ -1,5 +1,5 @@
 #include "ofApp.h"
-#include "ofxOculusRift.h"
+#include "ofxOculusDK2.h"
 //--------------------------------------------------------------
 void ofApp::setup(){
 	ofToggleFullscreen();

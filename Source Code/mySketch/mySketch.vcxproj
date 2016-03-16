@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|Win32">
+			<Configuration>Debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|Win32">
+			<Configuration>Release</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{7FD42DF7-442E-479A-BA76-D0022F99702A}</ProjectGuid>
+		<Keyword>Win32Proj</Keyword>
+		<RootNamespace>mySketch</RootNamespace>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<WholeProgramOptimization>true</WholeProgramOptimization>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Configuration)\</IntDir>
+		<TargetName>$(ProjectName)_debug</TargetName>
+		<LinkIncremental>true</LinkIncremental>
+		<GenerateManifest>true</GenerateManifest>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Configuration)\</IntDir>
+		<LinkIncremental>false</LinkIncremental>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<ClCompile>
+			<Optimization>Disabled</Optimization>
+			<MinimalRebuild>true</MinimalRebuild>
+			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofxOculusDK2\libs;..\..\..\addons\ofxOculusDK2\src;..\..\..\addons\ofxOculusDK2\libs\3rdParty;..\..\..\addons\ofxOculusDK2\libs\3rdParty\TinyXml;..\..\..\addons\ofxOculusDK2\libs\LibOVR;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\Extras;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Debug;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Debug\LibOVR.framework;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Debug\LibOVR.framework\Versions;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Debug\LibOVR.framework\Versions\A;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Debug\LibOVR.framework\Versions\A\Headers;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Debug\LibOVR.framework\Versions\A\PrivateHeaders;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Debug\LibOVR.framework\Versions\A\Resources;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Release;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Release\LibOVR.framework;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Release\LibOVR.framework\Versions;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Release\LibOVR.framework\Versions\A;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Release\LibOVR.framework\Versions\A\Headers;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Release\LibOVR.framework\Versions\A\PrivateHeaders;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Release\LibOVR.framework\Versions\A\Resources;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Projects;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Projects\Mac;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Projects\Mac\LibOVR.xcodeproj;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Projects\Mac\LibOVR.xcodeproj\xcshareddata;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Projects\Mac\LibOVR.xcodeproj\xcshareddata\xcschemes;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\Resources;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\Resources\Mac</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+		</ClCompile>
+		<Link>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<ClCompile>
+			<WholeProgramOptimization>false</WholeProgramOptimization>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofxOculusDK2\libs;..\..\..\addons\ofxOculusDK2\src;..\..\..\addons\ofxOculusDK2\libs\3rdParty;..\..\..\addons\ofxOculusDK2\libs\3rdParty\TinyXml;..\..\..\addons\ofxOculusDK2\libs\LibOVR;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\Extras;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Debug;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Debug\LibOVR.framework;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Debug\LibOVR.framework\Versions;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Debug\LibOVR.framework\Versions\A;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Debug\LibOVR.framework\Versions\A\Headers;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Debug\LibOVR.framework\Versions\A\PrivateHeaders;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Debug\LibOVR.framework\Versions\A\Resources;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Release;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Release\LibOVR.framework;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Release\LibOVR.framework\Versions;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Release\LibOVR.framework\Versions\A;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Release\LibOVR.framework\Versions\A\Headers;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Release\LibOVR.framework\Versions\A\PrivateHeaders;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Lib\Mac\Release\LibOVR.framework\Versions\A\Resources;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Projects;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Projects\Mac;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Projects\Mac\LibOVR.xcodeproj;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Projects\Mac\LibOVR.xcodeproj\xcshareddata;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Projects\Mac\LibOVR.xcodeproj\xcshareddata\xcschemes;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\Resources;..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\Resources\Mac</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+		</ClCompile>
+		<Link>
+			<IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+			<GenerateDebugInformation>false</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClCompile Include="src\main.cpp" />
+		<ClCompile Include="src\ofApp.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxOculusDK2\src\ofxOculusDK2.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxOculusDK2\libs\3rdParty\TinyXml\tinyxml2.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\OVR_CAPIShim.c" />
+		<ClCompile Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\OVR_CAPI_Util.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\OVR_StereoProjection.cpp" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="src\ofApp.h" />
+		<ClInclude Include="..\..\..\addons\ofxOculusDK2\src\ofxOculusDK2.h" />
+		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\3rdParty\TinyXml\tinyxml2.h" />
+		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\Extras\OVR_Math.h" />
+		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR.h" />
+		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI.h" />
+		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI_0_5_0.h" />
+		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI_D3D.h" />
+		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI_GL.h" />
+		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI_Keys.h" />
+		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI_Util.h" />
+		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_Kernel.h" />
+		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_Version.h" />
+		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\OVR_StereoProjection.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
+			<Project>{5837595d-aca9-485c-8e76-729040ce4b0b}</Project>
+		</ProjectReference>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="icon.rc">
+			<AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
+		</ResourceCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

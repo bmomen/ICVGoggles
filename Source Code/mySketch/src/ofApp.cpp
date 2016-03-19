@@ -7,10 +7,11 @@ ofTexture mirrorTexture;
 unsigned char * videoMirror;
 int camWidth;
 int camHeight; 
-
+int colourMode;
 
 void ofApp::setup(){
 	ofToggleFullscreen();
+	colourMode=0;
 	ofBackground(250, 250, 250);
 	ofSetVerticalSync(true);
 	oculusRift.baseCamera = &ofcam;
@@ -44,27 +45,28 @@ void ofApp::drawSceneRightEye() {
 	
 
 		ofPushMatrix();
-        
+        ofDrawPlane(-600, -400, 1200, 800);
         ofScale(1,1,1);
-        ofRotate(0, 0, 0, -1);        
-        ofTranslate(1, 0, -300);
+        ofRotate(0, 0, 0, 0);        
+        ofTranslate(1, -1, -400);
 
 		ofSetColor(255, 255, 255);
 
-		mirrorTexture.draw(-camWidth/2, -camHeight/2, camWidth, camHeight); 
+		mirrorTexture.draw(-725, -543.75, 1450, 1087.5); 
         ofTranslate(1, 1, 1);
         ofPopMatrix();
-	ofPushStyle();
-    ofNoFill();
+		ofPushStyle();
+		ofNoFill();
+		oculusRift.reset();
 	
 }
 //--------------------------------------------------------------
 void ofApp::update(){
-	//cam.update();
+	
 
 	ofBackground(0, 0, 0);
-
-if (cam.isFrameNew()) {
+	cam.update(); 
+	if (cam.isFrameNew()) {
     unsigned char * pixels = cam.getPixels();
     for (int i = 0; i < camHeight; i++) {
         for (int j = 0; j < camWidth*3; j+=3) {
@@ -76,15 +78,27 @@ if (cam.isFrameNew()) {
             int mir1 = (i*camWidth*3)+1 * (camWidth*3 - j-3);
             int mir2 = (i*camWidth*3)+1 * (camWidth*3 - j-2);
             int mir3 = (i*camWidth*3)+1 * (camWidth*3 - j-1);
-            // swap pixels
+            // swap pixels depending on Mode
+			if(colourMode==1) // MonoChromacy
+			{
+            videoMirror[pix1] = pixels[mir1];
+            videoMirror[pix2] = pixels[mir1];
+            videoMirror[pix3] = pixels[mir1];
+			}
+			else //Normal Colour
+			{
             videoMirror[pix1] = pixels[mir1];
             videoMirror[pix2] = pixels[mir2];
-            videoMirror[pix3] = pixels[mir3];    
+            videoMirror[pix3] = pixels[mir3];
+			}
         }
     }
+
+
+
     mirrorTexture.loadData(videoMirror, camWidth, camHeight, GL_RGB);    
 } 
-	cam.update();    
+	   
     
   
 }
@@ -122,6 +136,12 @@ void ofApp::keyPressed(int key){
 	if(key == 'r'){
         oculusRift.reset();
         
+    }
+	if(key == 'm'){ //MonoChromacy
+       colourMode=1;        
+    }
+	if(key == 'n'){ //Normal Colour Vision
+       colourMode=0;        
     }
 }
 

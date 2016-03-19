@@ -3,6 +3,11 @@
 //--------------------------------------------------------------
 vector<ofVideoGrabber*> cameras;
 int camCounter;
+ofTexture mirrorTexture;
+unsigned char * videoMirror;
+int camWidth;
+int camHeight; 
+
 
 void ofApp::setup(){
 	ofToggleFullscreen();
@@ -14,15 +19,20 @@ void ofApp::setup(){
 	cam.setDeviceID(0); //right eye
 	//cam2.listDevices();
 	//cam2.setDeviceID(1); //left eye	
-	cam.initGrabber(640,480);
+	//cam.initGrabber(640,480);
 	//cam2.initGrabber(640,480);
+	camWidth = 640;
+	camHeight = 480;
+	cam.setVerbose(true);
+	cam.initGrabber(camWidth, camHeight);
+	videoMirror = new unsigned char[camWidth*camHeight*3];
+	mirrorTexture.allocate(camWidth, camHeight, GL_RGB); 
 	
-
 
 	//enable mouse;
     ofcam.begin();
     ofcam.end();
-	//oculusRift.dismissSafetyWarning();
+	oculusRift.dismissSafetyWarning();
 }
 
 void ofApp::drawSceneLeftEye() {
@@ -35,28 +45,48 @@ void ofApp::drawSceneRightEye() {
 
 		ofPushMatrix();
         
-		ofDrawPlane(ofGetWidth() * .5, ofGetHeight()* .5, 100, 200);
         ofScale(1,1,1);
-        ofRotate(90, 0, 0, -1);
-            
-            ofTranslate(1, 1, 100);
-            cam.draw(0, 0, 640, 480);
-            //ofTranslate(1, 1, 1);
+        ofRotate(0, 0, 0, -1);        
+        ofTranslate(1, 0, -300);
+
+		ofSetColor(255, 255, 255);
+
+		mirrorTexture.draw(-camWidth/2, -camHeight/2, camWidth, camHeight); 
+        ofTranslate(1, 1, 1);
         ofPopMatrix();
-	
-	//cam.draw(0, 0, ofGetWidth(),ofGetHeight());
+	ofPushStyle();
+    ofNoFill();
 	
 }
 //--------------------------------------------------------------
 void ofApp::update(){
-	cam.update();
-	//cam2.update();    
-    
-    if(oculusRift.isSetup())
-    {
-        ofRectangle viewport = oculusRift.getOculusViewport();
-        
+	//cam.update();
+
+	ofBackground(0, 0, 0);
+
+if (cam.isFrameNew()) {
+    unsigned char * pixels = cam.getPixels();
+    for (int i = 0; i < camHeight; i++) {
+        for (int j = 0; j < camWidth*3; j+=3) {
+            // pixel number
+            int pix1 = (i*camWidth*3) + j;
+            int pix2 = (i*camWidth*3) + (j+1);
+            int pix3 = (i*camWidth*3) + (j+2);
+            // mirror pixel number
+            int mir1 = (i*camWidth*3)+1 * (camWidth*3 - j-3);
+            int mir2 = (i*camWidth*3)+1 * (camWidth*3 - j-2);
+            int mir3 = (i*camWidth*3)+1 * (camWidth*3 - j-1);
+            // swap pixels
+            videoMirror[pix1] = pixels[mir1];
+            videoMirror[pix2] = pixels[mir2];
+            videoMirror[pix3] = pixels[mir3];    
+        }
     }
+    mirrorTexture.loadData(videoMirror, camWidth, camHeight, GL_RGB);    
+} 
+	cam.update();    
+    
+  
 }
 
 //--------------------------------------------------------------
@@ -68,7 +98,7 @@ void ofApp::draw(){
         glEnable(GL_DEPTH_TEST);
         
         oculusRift.beginLeftEye();
-        //drawSceneLeftEye(); //rename the methods for these
+        drawSceneRightEye();
         oculusRift.endLeftEye();
         
         oculusRift.beginRightEye();

@@ -1,7 +1,6 @@
 #include "ofApp.h"
 
 //--------------------------------------------------------------
-vector<ofVideoGrabber*> cameras;
 int camCounter;
 ofTexture mirrorTexture;
 unsigned char * videoMirror;
@@ -10,18 +9,26 @@ int camHeight;
 int colourMode;
 
 void ofApp::setup(){
+	
+	//Setup openframeworks and the Oculus Rift
 	ofToggleFullscreen();
 	colourMode=0;
 	ofBackground(250, 250, 250);
 	ofSetVerticalSync(true);
 	oculusRift.baseCamera = &ofcam;
 	oculusRift.setup();
-	cam.listDevices();
-	cam.setDeviceID(0); //right eye
+	oculusRift.dismissSafetyWarning();
+	
+	
+	//This code is for the right camera, due to USB power limitations, this will be included hopefully later.
 	//cam2.listDevices();
 	//cam2.setDeviceID(1); //left eye	
 	//cam.initGrabber(640,480);
 	//cam2.initGrabber(640,480);
+
+	//Initialise left OVR Camera
+	cam.listDevices();
+	cam.setDeviceID(0);
 	camWidth = 640;
 	camHeight = 480;
 	cam.setVerbose(true);
@@ -33,16 +40,27 @@ void ofApp::setup(){
 	//enable mouse;
     ofcam.begin();
     ofcam.end();
-	oculusRift.dismissSafetyWarning();
+	
 }
 
-void ofApp::drawSceneLeftEye() {
+//--------------------------------------------------------------
+//drawSceneRightEye()-------------------------------------------
+//This method draws the mirrored OVRVision camera to the Oculus Rift.
+//Oculus transformations are done automatically by the OculusRiftDK2 addon.
+//Currently not completed due to two cameras not loading correctly: TODO
+
+void ofApp::drawSceneRightEye() {
 	
 	//cam2.draw(ofGetWidth() / 2, ofGetHeight(), ofGetWidth() / 2, -ofGetHeight());
 }
 
-void ofApp::drawSceneRightEye() {
-	
+
+//--------------------------------------------------------------
+//drawSceneLeftEye()--------------------------------------------
+//This method draws the mirrored OVRVision camera to the Oculus Rift.
+//Oculus transformations are done automatically by the OculusRiftDK2 addon.
+
+void ofApp::drawSceneLeftEye() {	
 
 		ofPushMatrix();
         ofDrawPlane(-600, -400, 1200, 800);
@@ -61,9 +79,11 @@ void ofApp::drawSceneRightEye() {
 	
 }
 //--------------------------------------------------------------
-void ofApp::update(){
-	
+//update()------------------------------------------------------
+//This method is called X times per second and updates the texture
+//which the video is being rendered on.
 
+void ofApp::update(){	
 	ofBackground(0, 0, 0);
 	cam.update(); 
 	if (cam.isFrameNew()) {
@@ -93,34 +113,28 @@ void ofApp::update(){
 			}
         }
     }
-
-
-
     mirrorTexture.loadData(videoMirror, camWidth, camHeight, GL_RGB);    
 } 
-	   
-    
   
 }
 
 //--------------------------------------------------------------
+//draw()--------------------------------------------------------
+//This method checks if the Rift is setup. If it is, it starts 
+//to render for the left and right eye.
+
 void ofApp::draw(){
 	if(oculusRift.isSetup())
     {
-
-	ofSetColor(255);
-        glEnable(GL_DEPTH_TEST);
-        
+		ofSetColor(255);
+        glEnable(GL_DEPTH_TEST);        
         oculusRift.beginLeftEye();
-        drawSceneRightEye();
-        oculusRift.endLeftEye();
-        
+        drawSceneLeftEye();
+        oculusRift.endLeftEye();        
         oculusRift.beginRightEye();
-        drawSceneRightEye(); //rename the methods for these
-        oculusRift.endRightEye();
-        
-        oculusRift.draw();
-        
+        drawSceneLeftEye();
+        oculusRift.endRightEye();        
+        oculusRift.draw();        
         glDisable(GL_DEPTH_TEST);
 	}
 }
@@ -128,19 +142,20 @@ void ofApp::draw(){
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
 	
-    if( key == 'f' )
+    if( key == 'f' ) //Toggle Fullscreen
     {
-        //gotta toggle full screen for it to be right
         ofToggleFullscreen();
     }
-	if(key == 'r'){
-        oculusRift.reset();
-        
+	if(key == 'r')//Reset OculusRift position
+	{ 
+        oculusRift.reset();        
     }
-	if(key == 'm'){ //MonoChromacy
+	if(key == 'm')//MonoChromacy Colour Mode
+	{ 
        colourMode=1;        
     }
-	if(key == 'n'){ //Normal Colour Vision
+	if(key == 'n')//Normal Colour Vision Mode
+	{ 
        colourMode=0;        
     }
 }

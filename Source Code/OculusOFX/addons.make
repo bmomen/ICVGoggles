@@ -1,2 +1,0 @@
-ofxOculusDK2
-ofxOpenCv

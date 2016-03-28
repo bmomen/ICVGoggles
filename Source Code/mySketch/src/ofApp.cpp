@@ -1,8 +1,9 @@
 #include "ofApp.h"
 #include "ofMath.h"
 #include <iostream>
+
+//Initialise variables
 //--------------------------------------------------------------
-int camCounter;
 ofTexture mirrorTexture;
 unsigned char * videoMirror;
 int camWidth;
@@ -10,7 +11,9 @@ int camHeight;
 int type;
 int severity;
 
+//4D Float array which contains values for RGB pixel conversions.
 float mult[3][11][3][3] = {
+	//protan simulation
 {
 { { 1.0f, 0.0f, 0.0f }, { 0.0f, 1.0f, 0.0f }, { 0.0f, 0.0f, 1.0f } },
 { { 0.856167f, 0.182038f, -0.038205f }, { 0.029342f, 0.955115f, 0.015544f }, { -0.00288f, -0.001563f, 1.004443f } },
@@ -62,10 +65,13 @@ void ofApp::setup(){
 	oculusRift.baseCamera = &ofcam;
 	oculusRift.setup();
 	oculusRift.dismissSafetyWarning();
+	
+	//Type is set to 0 - Normal Colour Vision
 	type=0;
+	//Severity is set to 0
 	severity=0;
 	
-	//This code is for the right camera, due to USB power limitations, this will be included hopefully later.
+	//This code is for the right camera. Due to USB power limitations, this will be included hopefully later.
 	//cam2.listDevices();
 	//cam2.setDeviceID(1); //left eye	
 	//cam.initGrabber(640,480);
@@ -86,7 +92,7 @@ void ofApp::setup(){
     ofcam.begin();
     ofcam.end();
 
-	//Printing values to console to check they are pulled correctly.
+	//Printing 4D array values to console to check they are pulled correctly.
 	for (int a=0; a<3; a=a+1) {
 		for (int b=0; b<11; b=b+1) {
 			for (int c=0; c<3; c=c+1) {
@@ -183,10 +189,6 @@ void ofApp::update(){
 
 }
 
- 
-
-
-
 
 //--------------------------------------------------------------
 //draw()--------------------------------------------------------
@@ -236,12 +238,12 @@ void ofApp::keyPressed(int key){
 	{ 
        type=3;        
     }
-	if(key == '=')//Increase Severity
+	if(key == '=')//Increase Severity: Max value 10
 	{ 
        if(severity<10)
 		   severity=severity+1;        
     }
-	if(key == '-')//Decrease Severity
+	if(key == '-')//Decrease Severity: Min value 0
 	{ 
        if(severity>0)
 		   severity=severity-1;        

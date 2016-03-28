@@ -168,11 +168,11 @@ void ofApp::update(){
 			}			
 			else //Protan/Deutan/Tritan modes
 			{
-				videoMirror[pix1] = static_cast<int>((pixels[mir1] * mult[type][severity][0][0]) + (pixels[mir2] * mult[type][severity][0][1]) + (pixels[mir3] * mult[type][severity][0][2]));
+				videoMirror[pix1] = min(255,static_cast<int>((pixels[mir1] * mult[type][severity][0][0]) + (pixels[mir2] * mult[type][severity][0][1]) + (pixels[mir3] * mult[type][severity][0][2])));
            		
-				videoMirror[pix2] = static_cast<int>((pixels[mir1] * mult[type][severity][1][0]) + (pixels[mir2] * mult[type][severity][1][1]) + (pixels[mir3] * mult[type][severity][1][2]));
+				videoMirror[pix2] = min(255,static_cast<int>((pixels[mir1] * mult[type][severity][1][0]) + (pixels[mir2] * mult[type][severity][1][1]) + (pixels[mir3] * mult[type][severity][1][2])));
             	
-				videoMirror[pix3] = static_cast<int>((pixels[mir1] * mult[type][severity][2][0]) + (pixels[mir2] * mult[type][severity][2][1]) + (pixels[mir3] * mult[type][severity][2][2]));
+				videoMirror[pix3] = min(255,static_cast<int>((pixels[mir1] * mult[type][severity][2][0]) + (pixels[mir2] * mult[type][severity][2][1]) + (pixels[mir3] * mult[type][severity][2][2])));
            		
 				
 			}

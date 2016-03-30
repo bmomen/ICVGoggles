@@ -1,7 +1,6 @@
 #include "ofApp.h"
 #include "ofMath.h"
 #include <iostream>
-
 //Initialise variables
 //--------------------------------------------------------------
 ofTexture mirrorTexture;
@@ -10,6 +9,8 @@ int camWidth;
 int camHeight; 
 int type;
 int severity;
+bool overlay;
+int rgb[2];
 
 //4D Float array which contains values for RGB pixel conversions.
 float mult[3][11][3][3] = {
@@ -65,7 +66,10 @@ void ofApp::setup(){
 	oculusRift.baseCamera = &ofcam;
 	oculusRift.setup();
 	oculusRift.dismissSafetyWarning();
-	
+	overlay=false;
+	rgb[0]=0;
+	rgb[1]=0;
+	rgb[2]=0;
 	//Type is set to 0 - Normal Colour Vision
 	type=0;
 	//Severity is set to 0
@@ -141,7 +145,7 @@ void ofApp::drawSceneLeftEye() {
 		ofPushStyle();
 		ofNoFill();
 		oculusRift.reset();
-
+		//cout << "Red: " << rgb[0] << " Green: " << rgb[1] << " Blue: " << rgb[2] << endl;
 		
 }
 //--------------------------------------------------------------
@@ -174,17 +178,25 @@ void ofApp::update(){
 			}			
 			else //Protan/Deutan/Tritan modes
 			{
-				videoMirror[pix1] = min(255,static_cast<int>((pixels[mir1] * mult[type][severity][0][0]) + (pixels[mir2] * mult[type][severity][0][1]) + (pixels[mir3] * mult[type][severity][0][2])));
-           		
-				videoMirror[pix2] = min(255,static_cast<int>((pixels[mir1] * mult[type][severity][1][0]) + (pixels[mir2] * mult[type][severity][1][1]) + (pixels[mir3] * mult[type][severity][1][2])));
-            	
-				videoMirror[pix3] = min(255,static_cast<int>((pixels[mir1] * mult[type][severity][2][0]) + (pixels[mir2] * mult[type][severity][2][1]) + (pixels[mir3] * mult[type][severity][2][2])));
-           		
 				
+				videoMirror[pix1] = (pixels[mir1] * mult[type][severity][0][0]) + (pixels[mir2] * mult[type][severity][0][1]) + (pixels[mir3] * mult[type][severity][0][2]);
+           		
+				videoMirror[pix2] = (pixels[mir1] * mult[type][severity][1][0]) + (pixels[mir2] * mult[type][severity][1][1]) + (pixels[mir3] * mult[type][severity][1][2]);
+            	
+				videoMirror[pix3] = (pixels[mir1] * mult[type][severity][2][0]) + (pixels[mir2] * mult[type][severity][2][1]) + (pixels[mir3] * mult[type][severity][2][2]);
+           		
+				rgb[0]=videoMirror[pix1];
+				rgb[1]=videoMirror[pix2];
+				rgb[2]=videoMirror[pix3];
+
+
 			}
+
+			
         }
     }
-    mirrorTexture.loadData(videoMirror, camWidth, camHeight, GL_RGB);    
+    mirrorTexture.loadData(videoMirror, camWidth, camHeight, GL_RGB); 
+	
 }
 
 }
@@ -198,6 +210,52 @@ void ofApp::update(){
 void ofApp::draw(){
 	if(oculusRift.isSetup())
     {
+		if(overlay)
+        {
+            oculusRift.beginOverlay(-250, 500,250);
+            ofRectangle overlayRect = oculusRift.getOverlayRectangle();
+            
+            ofPushStyle();
+            ofEnableAlphaBlending();
+            ofFill();
+            ofSetColor(255, 40, 10, 200);
+            
+            ofRect(overlayRect);
+            
+            ofSetColor(255,255);
+            ofFill();
+            
+            
+            if(type == 0)
+            {
+                ofDrawBitmapString("Protan", 40, 50);
+				ofDrawBitmapString("Severity: " + ofToString(severity), 40, 120);
+            }
+            else
+			if(type == 1)
+            {
+                ofDrawBitmapString("Deutan", 40, 50);
+				ofDrawBitmapString("Severity: " + ofToString(severity), 40, 120);
+            }
+			else
+			if(type == 2)
+            {
+                ofDrawBitmapString("Tritan", 40, 50);
+				ofDrawBitmapString("Severity: " + ofToString(severity), 40, 120);
+            }
+			else
+			if(type == 3)
+            {
+                ofDrawBitmapString("Monochromacy", 40, 50);
+				ofDrawBitmapString("Severity: N/A", 40, 120);
+            }
+            
+            
+            ofSetColor(0, 255, 0);
+            ofNoFill();            
+            ofPopStyle();
+            oculusRift.endOverlay();
+        }
 		ofSetColor(255);
         glEnable(GL_DEPTH_TEST);        
         oculusRift.beginLeftEye();
@@ -247,6 +305,13 @@ void ofApp::keyPressed(int key){
 	{ 
        if(severity>0)
 		   severity=severity-1;        
+    }
+	if(key == ' ')//Show Overlay
+	{ 
+		if(overlay==false)
+       overlay=true;   
+		else
+			overlay=false;
     }
 }
 

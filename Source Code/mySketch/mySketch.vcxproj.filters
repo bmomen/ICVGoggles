@@ -1,108 +1,108 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<ClCompile Include="src\ofApp.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\main.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxOculusDK2\src\ofxOculusDK2.cpp">
-			<Filter>addons\ofxOculusDK2\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxOculusDK2\libs\3rdParty\TinyXml\tinyxml2.cpp">
-			<Filter>addons\ofxOculusDK2\libs\3rdParty\TinyXml</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\OVR_CAPIShim.c">
-			<Filter>addons\ofxOculusDK2\libs\LibOVR\Src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\OVR_CAPI_Util.cpp">
-			<Filter>addons\ofxOculusDK2\libs\LibOVR\Src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\OVR_StereoProjection.cpp">
-			<Filter>addons\ofxOculusDK2\libs\LibOVR\Src</Filter>
-		</ClCompile>
-	</ItemGroup>
-	<ItemGroup>
-		<Filter Include="src">
-			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons">
-			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxOculusDK2">
-			<UniqueIdentifier>{40C0BA8F-DC93-6821-ABD1-2251}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxOculusDK2\src">
-			<UniqueIdentifier>{FA41F6AE-A2E4-BA2A-2AA6-07C3}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxOculusDK2\libs">
-			<UniqueIdentifier>{F928E8EF-4A2C-4A1A-E96D-994B}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxOculusDK2\libs\3rdParty">
-			<UniqueIdentifier>{0E6C049E-B336-BAE0-DDC7-7C7E}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxOculusDK2\libs\3rdParty\TinyXml">
-			<UniqueIdentifier>{21994019-6731-8E24-D456-C376}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxOculusDK2\libs\LibOVR">
-			<UniqueIdentifier>{64769382-7781-3A04-1427-69FE}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxOculusDK2\libs\LibOVR\Include">
-			<UniqueIdentifier>{33FE482C-B551-9035-9033-14BC}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxOculusDK2\libs\LibOVR\Include\Extras">
-			<UniqueIdentifier>{F10CC530-F71A-796D-5178-CBD1}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxOculusDK2\libs\LibOVR\Src">
-			<UniqueIdentifier>{16431DAC-B7DB-DF38-FDF6-38CD}</UniqueIdentifier>
-		</Filter>
-	</ItemGroup>
-	<ItemGroup>
-		<ClInclude Include="src\ofApp.h">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxOculusDK2\src\ofxOculusDK2.h">
-			<Filter>addons\ofxOculusDK2\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\3rdParty\TinyXml\tinyxml2.h">
-			<Filter>addons\ofxOculusDK2\libs\3rdParty\TinyXml</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\Extras\OVR_Math.h">
-			<Filter>addons\ofxOculusDK2\libs\LibOVR\Include\Extras</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR.h">
-			<Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI.h">
-			<Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI_0_5_0.h">
-			<Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI_D3D.h">
-			<Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI_GL.h">
-			<Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI_Keys.h">
-			<Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI_Util.h">
-			<Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_Kernel.h">
-			<Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_Version.h">
-			<Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\OVR_StereoProjection.h">
-			<Filter>addons\ofxOculusDK2\libs\LibOVR\Src</Filter>
-		</ClInclude>
-	</ItemGroup>
-	<ItemGroup>
-		<ResourceCompile Include="icon.rc" />
-	</ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOculusDK2\src\ofxOculusDK2.cpp">
+      <Filter>addons\ofxOculusDK2\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOculusDK2\libs\3rdParty\TinyXml\tinyxml2.cpp">
+      <Filter>addons\ofxOculusDK2\libs\3rdParty\TinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\OVR_CAPIShim.c">
+      <Filter>addons\ofxOculusDK2\libs\LibOVR\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\OVR_CAPI_Util.cpp">
+      <Filter>addons\ofxOculusDK2\libs\LibOVR\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\OVR_StereoProjection.cpp">
+      <Filter>addons\ofxOculusDK2\libs\LibOVR\Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOculusDK2">
+      <UniqueIdentifier>{40C0BA8F-DC93-6821-ABD1-2251}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOculusDK2\src">
+      <UniqueIdentifier>{FA41F6AE-A2E4-BA2A-2AA6-07C3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOculusDK2\libs">
+      <UniqueIdentifier>{F928E8EF-4A2C-4A1A-E96D-994B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOculusDK2\libs\3rdParty">
+      <UniqueIdentifier>{0E6C049E-B336-BAE0-DDC7-7C7E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOculusDK2\libs\3rdParty\TinyXml">
+      <UniqueIdentifier>{21994019-6731-8E24-D456-C376}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOculusDK2\libs\LibOVR">
+      <UniqueIdentifier>{64769382-7781-3A04-1427-69FE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOculusDK2\libs\LibOVR\Include">
+      <UniqueIdentifier>{33FE482C-B551-9035-9033-14BC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOculusDK2\libs\LibOVR\Include\Extras">
+      <UniqueIdentifier>{F10CC530-F71A-796D-5178-CBD1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxOculusDK2\libs\LibOVR\Src">
+      <UniqueIdentifier>{16431DAC-B7DB-DF38-FDF6-38CD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOculusDK2\src\ofxOculusDK2.h">
+      <Filter>addons\ofxOculusDK2\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\3rdParty\TinyXml\tinyxml2.h">
+      <Filter>addons\ofxOculusDK2\libs\3rdParty\TinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\Extras\OVR_Math.h">
+      <Filter>addons\ofxOculusDK2\libs\LibOVR\Include\Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR.h">
+      <Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI.h">
+      <Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI_0_5_0.h">
+      <Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI_D3D.h">
+      <Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI_GL.h">
+      <Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI_Keys.h">
+      <Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_CAPI_Util.h">
+      <Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_Kernel.h">
+      <Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Include\OVR_Version.h">
+      <Filter>addons\ofxOculusDK2\libs\LibOVR\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxOculusDK2\libs\LibOVR\Src\OVR_StereoProjection.h">
+      <Filter>addons\ofxOculusDK2\libs\LibOVR\Src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
 </Project>

@@ -66,6 +66,7 @@ void ofApp::setup(){
 	oculusRift.baseCamera = &ofcam;
 	oculusRift.setup();
 	oculusRift.dismissSafetyWarning();
+	oculusRift.setPositionTracking(false);
 	overlay=false;
 	rgb[0]=0;
 	rgb[1]=0;
@@ -74,6 +75,7 @@ void ofApp::setup(){
 	type=0;
 	//Severity is set to 0
 	severity=0;
+	oculusRift.lockView=true;
 	
 	//This code is for the right camera. Due to USB power limitations, this will be included hopefully later.
 	//cam2.listDevices();
@@ -123,7 +125,13 @@ void ofApp::drawSceneRightEye() {
 	//cam2.draw(ofGetWidth() / 2, ofGetHeight(), ofGetWidth() / 2, -ofGetHeight());
 }
 
-
+//Clamp method to ensure pixels do not overflow or underflow.
+static unsigned char correctValue(int value)
+{
+    if(value<0) value=0;
+    else if(value>255) value=255;
+    return value;
+}
 //--------------------------------------------------------------
 //drawSceneLeftEye()--------------------------------------------
 //This method draws the mirrored OVRVision camera to the Oculus Rift.
@@ -135,7 +143,7 @@ void ofApp::drawSceneLeftEye() {
         ofDrawPlane(-600, -400, 1200, 800);
         ofScale(1,1,1);
         ofRotate(0, 0, 0, 0);        
-        ofTranslate(1, -1, -400);
+        ofTranslate(1, -1, -550);
 
 		//ofSetColor(255, 255, 255);
 
@@ -179,12 +187,14 @@ void ofApp::update(){
 			else //Protan/Deutan/Tritan modes
 			{
 				
-				videoMirror[pix1] = (pixels[mir1] * mult[type][severity][0][0]) + (pixels[mir2] * mult[type][severity][0][1]) + (pixels[mir3] * mult[type][severity][0][2]);
+				videoMirror[pix1] = correctValue((pixels[mir1] * mult[type][severity][0][0]) + (pixels[mir2] * mult[type][severity][0][1]) + (pixels[mir3] * mult[type][severity][0][2]));
            		
-				videoMirror[pix2] = (pixels[mir1] * mult[type][severity][1][0]) + (pixels[mir2] * mult[type][severity][1][1]) + (pixels[mir3] * mult[type][severity][1][2]);
+				videoMirror[pix2] = correctValue((pixels[mir1] * mult[type][severity][1][0]) + (pixels[mir2] * mult[type][severity][1][1]) + (pixels[mir3] * mult[type][severity][1][2]));
             	
-				videoMirror[pix3] = (pixels[mir1] * mult[type][severity][2][0]) + (pixels[mir2] * mult[type][severity][2][1]) + (pixels[mir3] * mult[type][severity][2][2]);
-           		
+				videoMirror[pix3] = correctValue((pixels[mir1] * mult[type][severity][2][0]) + (pixels[mir2] * mult[type][severity][2][1]) + (pixels[mir3] * mult[type][severity][2][2]));
+           					
+
+
 				rgb[0]=videoMirror[pix1];
 				rgb[1]=videoMirror[pix2];
 				rgb[2]=videoMirror[pix3];

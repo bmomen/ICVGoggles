@@ -10,7 +10,7 @@ int camHeight;
 int type;
 int severity;
 bool overlay;
-int rgb[2];
+
 
 //4D Float array which contains values for RGB pixel conversions.
 float mult[3][11][3][3] = {
@@ -68,9 +68,8 @@ void ofApp::setup(){
 	oculusRift.dismissSafetyWarning();
 	oculusRift.setPositionTracking(false);
 	overlay=false;
-	rgb[0]=0;
-	rgb[1]=0;
-	rgb[2]=0;
+	
+
 	//Type is set to 0 - Normal Colour Vision
 	type=0;
 	//Severity is set to 0
@@ -148,7 +147,7 @@ void ofApp::drawSceneLeftEye() {
 		//ofSetColor(255, 255, 255);
 
 		mirrorTexture.draw(-725, -543.75, 1450, 1087.5); 
-        ofTranslate(1, 1, 1);
+        //ofTranslate(1, 1, 1);
         ofPopMatrix();
 		ofPushStyle();
 		ofNoFill();
@@ -195,9 +194,7 @@ void ofApp::update(){
            					
 
 
-				rgb[0]=videoMirror[pix1];
-				rgb[1]=videoMirror[pix2];
-				rgb[2]=videoMirror[pix3];
+				
 
 
 			}
@@ -222,46 +219,56 @@ void ofApp::draw(){
     {
 		if(overlay)
         {
-            oculusRift.beginOverlay(-250, 500,250);
+            oculusRift.beginOverlay(-400, 800,800);
             ofRectangle overlayRect = oculusRift.getOverlayRectangle();
             
             ofPushStyle();
             ofEnableAlphaBlending();
             ofFill();
-            ofSetColor(255, 40, 10, 200);
+            ofSetColor(255, 255, 255, 210);
             
-            ofRect(overlayRect);
+            ofRect(725,300,500,500);
             
-            ofSetColor(255,255);
+            ofSetColor(0,0,0);
             ofFill();
             
-            
+            ofDrawBitmapString("ICVGoggles", 875,320);
             if(type == 0)
             {
-                ofDrawBitmapString("Protan", 40, 50);
-				ofDrawBitmapString("Severity: " + ofToString(severity), 40, 120);
+				ofDrawBitmapString("Type: Protan", 725,360);
+				ofDrawBitmapString("Severity: " + ofToString(severity), 725,410);
             }
             else
 			if(type == 1)
             {
-                ofDrawBitmapString("Deutan", 40, 50);
-				ofDrawBitmapString("Severity: " + ofToString(severity), 40, 120);
+                ofDrawBitmapString("Type: Deutan", 725,360);
+				ofDrawBitmapString("Severity: " + ofToString(severity), 725,410);
             }
 			else
 			if(type == 2)
             {
-                ofDrawBitmapString("Tritan", 40, 50);
-				ofDrawBitmapString("Severity: " + ofToString(severity), 40, 120);
+                ofDrawBitmapString("Type: Tritan", 725,360);
+				ofDrawBitmapString("Severity: " + ofToString(severity), 725,410);
             }
 			else
 			if(type == 3)
             {
-                ofDrawBitmapString("Monochromacy", 40, 50);
-				ofDrawBitmapString("Severity: N/A", 40, 120);
+                ofDrawBitmapString("Type: Monochromacy", 725,360);
+				ofDrawBitmapString("Severity: N/A", 725,410);
             }
+            ofDrawBitmapString("--------------------------", 725,450);
+			ofDrawBitmapString("Keyboard Commands", 800,470);
+			ofDrawBitmapString(" 1 - Protan ", 725,490);
+			ofDrawBitmapString(" 2 - Deutan ", 725,510);
+			ofDrawBitmapString(" 3 - Tritan ", 725,530);
+			ofDrawBitmapString(" 4 - Monochromacy ", 725,550);
+			ofDrawBitmapString(" Left Click -", 725,570);
+			ofDrawBitmapString(" Increase Severity ", 725,590);
+			ofDrawBitmapString(" Right Click -", 725,610);
+			ofDrawBitmapString(" Decrease Severity ", 725,630);
+			ofDrawBitmapString(" Space - Toggle Menu ", 725,670);
             
-            
-            ofSetColor(0, 255, 0);
+            ofSetColor(255, 255, 255);
             ofNoFill();            
             ofPopStyle();
             oculusRift.endOverlay();
@@ -290,19 +297,19 @@ void ofApp::keyPressed(int key){
 	{ 
         oculusRift.reset();        
     }
-	if(key == 'p')//Protan
+	if(key == '1')//Protan
 	{ 
        type=0;        
     }
-	if(key == 'd')//Deutan
+	if(key == '2')//Deutan
 	{ 
        type=1;        
     }
-	if(key == 't')//Tritan
+	if(key == '3')//Tritan
 	{ 
        type=2;        
     }
-	if(key == 'm')//Monochromacy
+	if(key == '4')//Monochromacy
 	{ 
        type=3;        
     }
@@ -342,7 +349,16 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+	if(button==0)
+	{
+		if(severity<10)
+		   severity=severity+1;  
+	}
+	if(button==2)
+	{
+		if(severity>0)
+		   severity=severity-1;  
+	}
 }
 
 //--------------------------------------------------------------

@@ -8,3 +8,6 @@ The Oculus Rift was selected since it is a promising VR headset which will soon 
 
 If this project is successful in its aims, the software could potentially be used to educate and inform people about ICV in an impactful manner. 
 The system will also aid designers who struggle with creating interfaces tailored for colour blind users.
+
+
+https://github.com/bmomen/ICVGoggles/blob/master/Images/ICVGoggles_SecondStageUser1_Img4.JPG?raw=true

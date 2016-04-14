@@ -13,7 +13,7 @@ class ofApp : public ofBaseApp{
 		void drawSceneRightEye();
 		ofVideoGrabber cam;
 		ofVideoGrabber cam2;
-		ofCamera ofcam;
+		ofEasyCam ofcam;
 		ofxOculusDK2		oculusRift;
 		void keyPressed(int key);
 		void keyReleased(int key);

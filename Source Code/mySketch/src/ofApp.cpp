@@ -10,7 +10,6 @@ int camHeight;
 int type;
 int severity;
 bool overlay;
-
 //4D Float array which contains values for RGB pixel conversions.
 float mult[3][11][3][3] = {
 	//protan simulation
@@ -60,19 +59,17 @@ void ofApp::setup(){
 	//Setup openframeworks and the Oculus Rift
 	ofToggleFullscreen();
 	ofBackground(250, 250, 250);
-	ofSetVerticalSync(true);
+	//ofSetVerticalSync(true);
 	oculusRift.baseCamera = &ofcam;
 	oculusRift.setup();
 	oculusRift.dismissSafetyWarning();
 	oculusRift.setPositionTracking(false);
 	overlay=false;	
-
 	//Type is set to 0 - Normal Colour Vision
 	type=0;
 	//Severity is set to 0
 	severity=0;
 	oculusRift.lockView=true;
-
 	//This code is for the right camera. Due to USB power limitations, this will be included hopefully later.
 	//cam2.listDevices();
 	//cam2.setDeviceID(1); //left eye	
@@ -88,7 +85,7 @@ void ofApp::setup(){
 	cam.initGrabber(camWidth, camHeight);
 	videoMirror = new unsigned char[camWidth*camHeight*3];
 	mirrorTexture.allocate(camWidth, camHeight, GL_RGB); 	
-
+	//ovrHmd_ConfigureTracking(hmd,0,0);
 	//enable mouse;
 	ofcam.begin();
 	ofcam.end();
@@ -135,19 +132,18 @@ static unsigned char correctValue(int value)
 void ofApp::drawSceneLeftEye() {	
 
 	ofPushMatrix();
-	ofDrawPlane(-600, -400, 1200, 800);
-	ofScale(1,1,1);
-	ofRotate(0, 0, 0, 0);        
-	ofTranslate(1, -1, -550);
-
-	//ofSetColor(255, 255, 255);
+	oculusRift.reset();
+	//ofScale(1,1,1);
 
 	mirrorTexture.draw(-725, -543.75, 1450, 1087.5); 
 	//ofTranslate(1, 1, 1);
 	ofPopMatrix();
 	ofPushStyle();
 	ofNoFill();
-	oculusRift.reset();
+	ofPopStyle();
+
+
+
 	//cout << "Red: " << rgb[0] << " Green: " << rgb[1] << " Blue: " << rgb[2] << endl;
 
 }
@@ -280,9 +276,11 @@ void ofApp::keyPressed(int key){
 	{
 		ofToggleFullscreen();
 	}
-	if(key == 'r')//Reset OculusRift position
+	if(key == 'r')//Reset OculusRift position & values
 	{ 
-		oculusRift.reset();        
+		oculusRift.reset(); 
+		type=0;
+		severity=0;
 	}
 	if(key == '1')//Protan
 	{ 
@@ -310,7 +308,7 @@ void ofApp::keyPressed(int key){
 		if(severity>0)
 			severity=severity-1;        
 	}
-	if(key == ' ')//Show Overlay
+	if(key == ' ')//Show Overlay (Spacebar key)
 	{ 
 		if(overlay==false)
 			overlay=true;   

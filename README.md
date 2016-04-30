@@ -1,4 +1,4 @@
-# ICVGoggles: Wearable Personalised Simulations of Impaired Colour Vision
+# ICVGoggles: Wearable Adjustable Simulations of Impaired Colour Vision
 This project is part of the Honours course taken by Babak Momen under the supervision of David Flatla at the University of Dundee.
 The project aims to improve upon current ICV (Impaired Colour Vision) simulation techniques by utilising new technological hardware. 
 An Oculus Rift headset will be used in conjunction with OVRVision cameras to simulate a spectrum of ICV to users. 

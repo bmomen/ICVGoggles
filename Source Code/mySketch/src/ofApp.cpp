@@ -60,6 +60,7 @@ void ofApp::setup(){
 	ofToggleFullscreen();
 	ofBackground(250, 250, 250);
 	//ofSetVerticalSync(true);
+	
 	oculusRift.baseCamera = &ofcam;
 	oculusRift.setup();
 	oculusRift.dismissSafetyWarning();
@@ -84,7 +85,7 @@ void ofApp::setup(){
 	cam.setVerbose(true);
 	cam.initGrabber(camWidth, camHeight);
 	videoMirror = new unsigned char[camWidth*camHeight*3];
-	mirrorTexture.allocate(camWidth, camHeight, GL_RGB); 	
+	mirrorTexture.allocate(camWidth, camHeight, GL_RGB); 
 	//ovrHmd_ConfigureTracking(hmd,0,0);
 	//enable mouse;
 	ofcam.begin();
@@ -133,19 +134,13 @@ void ofApp::drawSceneLeftEye() {
 
 	ofPushMatrix();
 	oculusRift.reset();
-	//ofScale(1,1,1);
-
-	mirrorTexture.draw(-725, -543.75, 1450, 1087.5); 
-	//ofTranslate(1, 1, 1);
+	ofTranslate(0,0,150);
+	mirrorTexture.draw(-725, -700, 1450, 1087.5); 	
 	ofPopMatrix();
 	ofPushStyle();
 	ofNoFill();
 	ofPopStyle();
-
-
-
 	//cout << "Red: " << rgb[0] << " Green: " << rgb[1] << " Blue: " << rgb[2] << endl;
-
 }
 //--------------------------------------------------------------
 //update()------------------------------------------------------
@@ -177,7 +172,6 @@ void ofApp::update(){
 				}			
 				else //Protan/Deutan/Tritan modes
 				{
-
 					videoMirror[pix1] = correctValue((pixels[mir1] * mult[type][severity][0][0]) + (pixels[mir2] * mult[type][severity][0][1]) + (pixels[mir3] * mult[type][severity][0][2]));
 
 					videoMirror[pix2] = correctValue((pixels[mir1] * mult[type][severity][1][0]) + (pixels[mir2] * mult[type][severity][1][1]) + (pixels[mir3] * mult[type][severity][1][2]));
@@ -204,17 +198,13 @@ void ofApp::draw(){
 		{
 			oculusRift.beginOverlay(-400, 800,800);
 			ofRectangle overlayRect = oculusRift.getOverlayRectangle();
-
 			ofPushStyle();
 			ofEnableAlphaBlending();
 			ofFill();
 			ofSetColor(255, 255, 255, 210);
-
 			ofRect(725,300,500,500);
-
 			ofSetColor(0,0,0);
 			ofFill();
-
 			ofDrawBitmapString("ICVGoggles", 875,320);
 			if(type == 0)
 			{
